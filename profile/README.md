@@ -1,79 +1,74 @@
-# Cracking Shells - Scientific Software Access for LLM-Powered Research
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../resources/images/cs_wide_dark_bg.png">
+  <source media="(prefers-color-scheme: light)" srcset="../resources/images/cs_wide_light_bg.png">
+  <img alt="Cracking Shells" src="../resources/images/cs_wide_dark_bg.png">
+</picture>
 
-![Cracking Shells Logo](../resources/images/cs_wide_dark_bg.png)
+# Cracking Shells — Scientific Software Access for LLM-Powered Research
 
-## About Cracking Shells 🥚
+**Cracking Shells** is an open-source initiative that makes scientific software accessible to Large Language Models (LLMs) through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). Our mission: empower researchers to use LLMs as scientific assistants with proper, controlled access to established tools, databases, and resources — **always with accurate citations**.
 
-**Cracking Shells** is an open-source initiative focused on making scientific software accessible to Large Language Models (LLMs) through the Model Context Protocol (MCP). Our mission is to enable researchers to leverage the power of LLMs as scientific assistants with proper access to established scientific tools, databases, and resources, **all with proper citations**.
-
-## Our Vision
-
-We believe that LLMs can be transformed into powerful research assistants when they have proper, controlled access to scientific software and databases. **Cracking Shells** provides a standardized infrastructure where scientific tools can be wrapped as MCP servers, enabling LLMs to:
-
-- **Provide proper citation for every tool and resource used**.
-- Execute computational tasks with scientific software
-- Access and query scientific databases
-- Process research data and generate insights
-
-## The Cracking Shells Ecosystem
+## The Ecosystem
 
 ### Hatch! 🐣
 
-**[Hatch!](https://github.com/CrackingShells/Hatch)** is the package manager for MCP servers packages hosted on the ecosystem called _Hatch! Packages_. Such packages notably enable declaring dependencies of the MCP servers as well as the citations an LLM must report when using an MCP server. It also handles automatically all the installation and organization of the python environments necessary for the dependencies to be installed.
+**[Hatch!](https://github.com/CrackingShells/Hatch)** is the package manager for the Cracking Shells ecosystem. It handles:
+
+- Declaring MCP server dependencies and the citations an LLM must report when using them
+- Automatic installation and isolation of Python environments for each package's dependencies
+- Versioning and dependency resolution across the ecosystem
 
 ### Hatchling 🐥
 
-**[Hatchling](https://github.com/CrackingShells/Hatchling)** is our frontend application - a CLI-based chat interface that connects local LLMs (via Ollama) to MCP servers. It's the user-facing component that researchers interact to access the entire **Cracking Shells** ecosystem.
+**[Hatchling](https://github.com/CrackingShells/Hatchling)** is the user-facing CLI chat interface that connects local LLMs (via [Ollama](https://ollama.com)) to MCP servers. Key features:
 
-#### Key features
-
-- Interactive chat interface with tool access management
+- Interactive chat with managed access to scientific tools
 - Support for local LLMs via Ollama
-- Tool execution monitoring and timeout controls
-- Automatic citation of all used scientific MCP servers managed by _Hatch!_ the LLM uses
+- Tool execution monitoring with timeout controls
+- Automatic citation of all Hatch-managed MCP servers used during a session
 
-### Scientific Domain Repositories (IN BUILDING)
+### Scientific Domain Repositories *(Coming Soon)*
 
-We hope you people from all fields will gather here to share MCP server wrappers to the thousands of scientific software already published.
-Come, and contribute to the repository that matches your software:
+We are building a network of community-driven repositories, each housing MCP server wrappers for tools in a scientific discipline. We invite contributors from all fields to participate:
 
-- Cracking Biology - MCP servers for bioinformatics tools (BLAST, UniProt, PubMed, etc.)
-- Cracking Chemistry - Chemical databases, molecular visualization, reaction prediction
-- Cracking Physics - Simulation tools, data analysis, and visualization
-- Cracking Mathematics - Computer algebra systems, statistical tools, and visualization
-- Cracking Computer Science - Code analysis, execution environments, and development tools
-- Cracking Engineering - CAD integration, simulation tools, and material databases
+| Repository | Domain |
+|---|---|
+| Cracking Biology | Bioinformatics tools (BLAST, UniProt, PubMed, …) |
+| Cracking Chemistry | Chemical databases, molecular visualization, reaction prediction |
+| Cracking Physics | Simulation tools, data analysis, and visualization |
+| Cracking Mathematics | Computer algebra systems, statistical tools, and visualization |
+| Cracking Computer Science | Code analysis, execution environments, and development tools |
+| Cracking Engineering | CAD integration, simulation tools, and material databases |
 
 ## Roadmap
 
-1. **(Current)** Core Infrastructure Development
-   - Stabilize Hatchling CLI interface
-   - Establish package architecture for MCP servers
-   - Develop versioning and dependency management
+- **Phase 1 — Core Infrastructure** *(current)*
+  - Stabilize the Hatchling CLI interface
+  - Establish the Hatch package architecture and schema
+  - Develop versioning and dependency management
 
-2. Scientific Domain Expansion
-   - Launch Hatch! Biology with essential bioinformatics tools
-   - Establish contribution guidelines for scientific software integration
+- **Phase 2 — Scientific Domain Expansion**
+  - Launch Cracking Biology with essential bioinformatics tools
+  - Establish contribution guidelines for scientific software integration
 
-3. Community Growth
-   - Support third-party MCP servers
-   - Deploy scientific domain repositories
-   - Develop educational resources for researchers
-   - Organize dev jams and hackathons
+- **Phase 3 — Community Growth**
+  - Support third-party MCP server contributions
+  - Deploy scientific domain repositories
+  - Develop educational resources for researchers
+  - Organize dev jams and hackathons
 
-4. User Experience Enhancement
-   - Graphical user interface for Hatchling
-   - User-defined tool chains and workflows
-   - Integration with research notebooks and documentation tools
+- **Phase 4 — User Experience**
+  - Graphical user interface for Hatchling
+  - User-defined tool chains and workflows
+  - Integration with research notebooks and documentation tools
 
 ## Contributing
 
-We are in the early stages and much is being setup internally for the time being.
-However, if you're interested in contributing, using our tools in your research, or have questions about the project, please don't hesitate to reach out:
+The project is in its early stages. If you're interested in contributing, using our tools in your research, or have questions, please reach out:
 
-- Project Lead: Eliott Jacopin
-- Email: <eliott.jacopin@riken.jp>
+- **Project Lead:** Eliott Jacopin
+- **Email:** <eliott.jacopin@riken.jp>
 
 ## License
 
-Hatch! and Hatchling projects are released under the AGPLv3 License, though individual repositories licenses have their own specific licensing requirements based on the software they integrate with. Please see individual repositories for specific license information.
+Hatch! and Hatchling are released under the [AGPLv3 License](https://www.gnu.org/licenses/agpl-3.0.html). Individual domain repositories may carry their own licenses based on the software they integrate with — see each repository for details.
